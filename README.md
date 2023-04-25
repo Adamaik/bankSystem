@@ -1,12 +1,22 @@
-# A test
+# homeworkAsBank
 
 
 
-## Getting started
+## 简介
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+这只是我们的cpp期末大作业而已，一个银行管理系统，我闲得无聊学一学git操作
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+目前远远没有完成，只是新建文件夹罢了
+
+不过似乎我提交上来的垃圾有点多？
+
+算了，就当方便部署，免去配置环境了（狗头）
+
+反正校园网传的快
+
+还有一个负责qt的大冤种队友，但愿到时候我俩的代码能拼装的起来。。。
+
+啊，以及该死的介绍ppt，得要英文的
 
 ## Add your files
 
