@@ -21,10 +21,19 @@
     <ClCompile Include="Code.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Accoount.cpp">
+    <ClCompile Include="FlexibleAccount.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="BankSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SavingAccount.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminAccount.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +41,19 @@
     <ClInclude Include="Code.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Accoount.h">
+    <ClInclude Include="FlexibleAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="BankSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SavingAccount.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminAccount.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
