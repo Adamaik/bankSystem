@@ -19,11 +19,14 @@ BankSystem::BankSystem()
 	{
 		temp.push_back(static_cast<bool>(m));
 	}
+	std::vector<char> AllAccount;
 	AllAccount = Code().decode(temp);
 	AccountFile.close();
+	change(AllAccount);
 }
 
-void BankSystem::saveAdd() {
+bool BankSystem::saveAdd() {
+	std::vector<char> AddAccount;
 	fstream AccountFile;
 	AccountFile.open(AccountFileName, ios::app | ios::binary);
 	if (!AccountFile.is_open()) {
@@ -36,11 +39,10 @@ void BankSystem::saveAdd() {
 		AccountFile << i;
 	}
 	AccountFile.close();
-	AllAccount.insert(AllAccount.end(), AddAccount.begin(), AddAccount.end());
 	AddAccount.clear();
 }
 
-void BankSystem::clearAll() {
+bool BankSystem::clearAll() {
 	ofstream AccountFile(AccountFileName);
 	if (AccountFile.is_open()) {
 		cout << "AccountFile has been cleared!" << endl;
@@ -49,4 +51,9 @@ void BankSystem::clearAll() {
 		cout << "AccountFile clear failed!" << endl;
 	}
 	AccountFile.close();
+}
+
+bool BankSystem::change(vector<char> input)
+{
+
 }
