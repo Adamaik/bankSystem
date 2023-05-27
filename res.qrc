@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>xiaohui.jpg</file>
+        <file>school.jpeg</file>
+        <file>mainwindow.png</file>
+        <file>1.jpg</file>
+        <file>jrbj1.jfif</file>
+        <file>jrbj2.webp</file>
+        <file>os.jpg</file>
+        <file>osuser.jpg</file>
+        <file>jrbj2(1).jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/new/prefix2"/>
+    <qresource prefix="/new/prefix3"/>
+</RCC>
