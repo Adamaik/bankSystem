@@ -7,6 +7,8 @@
 
 friends::friends()
 {
+
+
 	fstream friendsfile;
 	friendsfile.open(FriendsFileName, ios::in | ios::out | ios::binary);
 	if (!friendsfile.is_open())
@@ -17,7 +19,7 @@ friends::friends()
 	}
 	char temp1;
 	bool temp2;
-	frimix.resize(1);
+ frimix.resize(1);
 	int n = 0;
 	while (friendsfile.get(temp1))
 	{
@@ -67,17 +69,17 @@ friends::~friends()
 
 void friends::registers()
 {
-	sum += 1;
-	frimix.resize(sum);
-	temp.resize(sum);
-	for (int i = 0; i < sum; i++)
-	{
-		frimix[i].resize(sum);
-		temp[i].resize(sum);
-	}
+    sum += 1;
 }
 void friends::set(int x,int y)
 {
+    frimix.resize(sum);
+    temp.resize(sum);
+    for (int i = 0; i < sum; i++)
+    {
+        frimix[i].resize(sum);
+        temp[i].resize(sum);
+    }
 	this->frimix[x][y] = 1;
 	this->frimix[y][x] = 1;
 	carr();
@@ -110,14 +112,14 @@ bool friends::isfriend(int x, int y)
 
 void friends::carr()
 {
-	for (int p = 1; p < sum; p++)
+    for (int p = 1; p < sum-1; p++)
 	{
 		temp = frimix;
-		for (int i = 0; i < sum; i++)
+        for (int i = 0; i < sum-1; i++)
 		{
-			for (int j = 0; j < sum; j++)
+            for (int j = 0; j < sum-1; j++)
 			{
-				for (int k = 0; k < sum; k++)
+                for (int k = 0; k < sum-1; k++)
 				{
 					temp[i][j] = this->frimix[i][k] * this->frimix[k][j] + temp[i][j];
 				}
@@ -125,7 +127,7 @@ void friends::carr()
 		}
 		this->frimix = temp;
 	}
-	for (int i = 0; i < sum; i++)
+    for (int i = 0; i < sum-1; i++)
 	{
 		frimix[i][i] = 1;
 	}

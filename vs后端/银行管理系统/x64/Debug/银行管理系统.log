@@ -1,5 +1,1 @@
-﻿  BankSystem.cpp
-  main.cpp
-  正在生成代码...
-D:\c\银行管理系统\银行管理系统\BankSystem.cpp(139): warning C4715: “BankSystem::saveall”: 不是所有的控件路径都返回值
-  银行管理系统.vcxproj -> D:\c\银行管理系统\x64\Debug\银行管理系统.exe
+﻿  银行管理系统.vcxproj -> D:\c\银行管理系统\vs后端\x64\Debug\银行管理系统.exe

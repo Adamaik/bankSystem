@@ -1,6 +1,8 @@
 #include "BankSystem.h"
 #include<iostream>
 #include<string>
+#include<iomanip>
+#include<sstream>
 using namespace std;
 
 BankSystem::~BankSystem()
@@ -179,8 +181,8 @@ void BankSystem::change(vector<char>& input)//SavingAccount
 			}
 			++ptr;
 		}
-		string str(temp.begin(), temp.end());
-		temp2.name = str;
+        string str(temp.begin(), temp.end());
+        temp2.name = str;
 		temp.clear();
 		while (1)
 		{
@@ -322,6 +324,7 @@ void BankSystem::change(vector<char>& input)//SavingAccount
 		x[n] = '\0';
 		temp2.rate = atof(x);
 		SavingAccounts->push_back(temp2);
+        temp.clear();
 		if (*ptr == '\n')
 		{
 			break;
@@ -533,8 +536,8 @@ int BankSystem::transfer(SavingAccount* a, string b, double c)
 	if (!temp[3])
 	{
 		return 0;
-	}
-	if (!a->getmoney(c))
+    }
+    if (!a->getmoney(c))
 	{
 		return 2;
 	}
@@ -560,4 +563,29 @@ void BankSystem::save()
 {
 	clearAll();
 	saveall();
+}
+
+vector<string> BankSystem::showUsers()
+{
+	vector<string> output;
+	for (auto i : (*SavingAccounts))
+	{
+		stringstream ss;
+		string s = i.judge ? "是" : "否";
+		ss << left << setw(11) << i.id << left << setw(8) << i.name << left << setw(13) << i.phone << left << setw(3) << s;
+		output.push_back(ss.str());
+	}
+	return output;
+}
+
+vector<string> BankSystem::showAdmins()
+{
+	vector<string> output;
+	for (auto i : (*AdminAccounts))
+	{
+		stringstream ss;
+		ss << left << setw(11) << i.id << left << setw(8) << i.name << left << setw(13) << i.phone << left << setw(6) << "（管理员）";
+		output.push_back(ss.str());
+	}
+	return output;
 }
